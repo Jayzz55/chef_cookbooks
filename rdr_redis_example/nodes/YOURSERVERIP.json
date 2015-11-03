@@ -1,14 +1,6 @@
 {
-  "redis-server" : {
-    "port" : "6380",
-    "additional_configuration_values" : {
-      "maxmemory" : "419430400",
-      "maxmemory-policy" : "allkeys-lru",
-      "maxmemory-samples" : "10"
-    }
-  },
   "run_list": [
-    "recipe[redis-server::default]"
+    "role[redis-cache-server]"
   ],
   "automatic": {
     "ipaddress": "YOURSERVERIP"
